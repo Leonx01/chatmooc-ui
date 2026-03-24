@@ -1,7 +1,37 @@
+# Dependencies
 node_modules
-.DS_Store
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Build output
 dist*
 dist-ssr
-*.local
+
+# Local env files
+.env.local
+.env.*.local
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache
 .eslintcache
 .stylelintcache
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

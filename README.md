@@ -1,117 +1,105 @@
-<p align="center">
-  <img src="https://fantastic-admin.github.io/logo.png" width="200" height="200" />
-</p>
+# ChatMOOC Frontend
 
-<h1 align="center">Fantastic-admin</h1>
+ChatMOOC 前端项目 - 一个基于 AI 的在线学习平台，提供智能学习、资源管理和复习功能。
 
-<p align="center">一款<b>开箱即用</b>的 Vue3 中后台管理系统框架</p>
+## 项目简介
 
-<p align="center">
-  <a href="https://fantastic-admin.github.io" target="_blank">官网</a>
-  <sup><a href="https://fantastic-admin.gitee.io" target="_blank">备用地址</a></sup>
-  <span>&nbsp;|&nbsp;</span>
-  <a href="https://fantastic-admin.github.io/support.html" target="_blank">技术支持</a>
-  <span>&nbsp;|&nbsp;</span>
-  演示
-  <sup><a href="https://fantastic-admin.github.io/basic-example" target="_blank">基础版</a> <a href="https://fantastic-admin.github.io/pro-example" target="_blank">专业版</a></sup>
-  <span>&nbsp;|&nbsp;</span>
-  购买
-  <sup><a href="https://fantastic-admin.github.io/buy.html" target="_blank">专业版</a></sup>
-<p>
+ChatMOOC 是一个智能在线学习平台，结合了 AI 技术与现代教育需求。本项目是 ChatMOOC 的前端实现，基于 Vue 3 + TypeScript + Element Plus 构建。
 
-<p align="center">
-  <a href="###"><img src="https://img.shields.io/github/license/fantastic-admin/basic?label=%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE&style=flat-square" /></a>
-  <a href="https://github.com/fantastic-admin/basic/releases" target="_blank"><img src="https://img.shields.io/github/v/release/fantastic-admin/basic?label=%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC&style=flat-square" /></a>
-</p>
+## 技术栈
 
-## 特点
+- **框架**: Vue 3 (Composition API)
+- **语言**: TypeScript
+- **UI 组件库**: Element Plus
+- **状态管理**: Pinia
+- **路由**: Vue Router (文件系统自动路由)
+- **构建工具**: Vite
+- **样式**: SCSS + UnoCSS
+- **HTTP 客户端**: Axios
 
-- 可自由替换 UI 组件库，默认使用 Element Plus
-- 丰富的布局与主题，覆盖市面上各种中后台应用场景，兼容PC、平板和移动端
-- 提供系统配置文件，轻松实现个性化定制
-- 根据路由配置自动生成导航栏
-- 基于文件系统的路由
-- 支持全方位权限验证
-- 内置多级路由最佳缓存方案
-- 轻松实现国际化多语言适配
-- 提供接近于浏览器原生标签栏操作体验的标签页功能
+## 功能模块
 
-## 下载
+- **学习模块 (Study)**: 课程学习、章节管理、专注模式
+- **资源模块 (Resource)**: 学习资源管理、文件预览
+- **复习模块 (Review)**: 复习卡片、文件夹管理、AI 机器人助手
 
-> 本仓库为基础版
+## 快速开始
 
-**直接拉取源码可能会包含未发布的内容，推荐去 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载稳定版本的压缩包**。如果确定需要拉取源码，请参考下列分支说明：
+### 环境要求
 
-- `main` Vue3 版本框架源码分支，不含示例代码，可直接用于实际开发
-- `example` Vue3 版本演示源码分支，同线上演示站，包含大量示例，可用于参考学习
-- `vue2` Vue2 版本框架源码分支，不含示例代码，可直接用于实际开发（停止维护）
-- `vue2-example` Vue2 版本演示源码分支，包含大量示例，可用于参考学习（停止维护）
+- Node.js: ^18.0.0 || ^20.0.0
+- pnpm (强制使用)
 
-## 预览
+### 安装依赖
 
-> 预览截图为 Vue3 专业版
+```bash
+pnpm install
+```
 
-<table>
-  <tr>
-    <td><img src="https://fantastic-admin.github.io/preview1.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview2.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview3.png" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://fantastic-admin.github.io/preview4.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview5.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview6.png" /></td>
-  </tr>
-</table>
+### 开发模式
 
-## 支持
+```bash
+pnpm dev
+```
 
-如果觉得 Fantastic-admin 这个框架不错，或者已经在使用了，希望你可以在 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将对我是极大的鼓励。
+开发服务器默认运行在 http://localhost:9005
 
-[![star](https://img.shields.io/github/stars/fantastic-admin/basic?style=social)](https://github.com/fantastic-admin/basic)
+### 构建
 
-[![star](https://gitee.com/fantastic-admin/basic/badge/star.svg?theme=dark)](https://gitee.com/fantastic-admin/basic)
+```bash
+# 生产环境
+pnpm build
 
-<details>
-<summary>Github Stars 曲线</summary>
+# 测试环境
+pnpm build:test
+```
 
-[![Stargazers over time](https://starchart.cc/fantastic-admin/basic.svg)](https://starchart.cc/fantastic-admin/basic)
-</details>
+### 代码检查
 
-## 生态
+```bash
+pnpm lint           # 运行所有检查
+pnpm lint:tsc       # TypeScript 类型检查
+pnpm lint:eslint    # ESLint 检查
+pnpm lint:stylelint # Stylelint 检查
+```
 
-<table>
-  <tr>
-    <th colspan="3" align="center">
-      <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">Fantastic-startkit</a>
-    </th>
-  </tr>
-  <tr>
-    <th colspan="3" align="center">
-      一款简单好用的 Vue3 项目启动套件
-    </th>
-  </tr>
-</table>
+## 项目结构
 
-<table>
-  <tr>
-    <th colspan="3" align="center">
-      <a href="https://one-step-admin.github.io" target="_blank">One-step-admin</a>
-    </th>
-  </tr>
-  <tr>
-    <th colspan="3" align="center">
-      一款干啥都快人一步的 Vue 中后台管理系统框架
-    </th>
-  </tr>
-  <tr>
-    <td><img src="https://one-step-admin.github.io/preview1.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview2.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview3.png" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://one-step-admin.github.io/preview4.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview5.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview6.png" /></td>
-  </tr>
-</table>
+```
+src/
+├── api/           # API 接口定义
+│   └── modules/   # 按模块组织的 API
+├── assets/        # 静态资源
+├── components/    # 公共组件
+├── layouts/       # 布局组件
+├── router/        # 路由配置
+│   └── modules/   # 模块路由
+├── store/         # Pinia 状态管理
+│   └── modules/   # 状态模块
+├── utils/         # 工具函数
+└── views/         # 页面视图
+    ├── resource/  # 资源模块
+    ├── study/     # 学习模块
+    └── review/    # 复习模块
+```
+
+## 配置说明
+
+- `.env.development` - 开发环境配置
+- `.env.production` - 生产环境配置
+- `.env.test` - 测试环境配置
+- `src/settings.ts` - 应用运行时配置
+
+## 分支策略
+
+- `main` - 主分支，稳定版本
+- `feature/*` - 新功能开发分支
+- `develop` - 开发分支
+
+## 许可证
+
+[MIT](LICENSE)
+
+---
+
+**注意**: 本项目基于 [Fantastic-admin](https://fantastic-admin.github.io) 框架开发。
